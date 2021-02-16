@@ -1,4 +1,4 @@
-# capstone_1 proposals
+# capstone 1 proposals
 
 ### Overview
 1. From Shopify’s Admin API, the objective is to collect data for Shopify merchants who use the Facebook and Instagram sales channels for a given product category to determine whether either channel is more effective for a given product category.
