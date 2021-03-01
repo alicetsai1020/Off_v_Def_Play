@@ -1,24 +1,41 @@
-# capstone 1 proposals
+# NBA Winning Stats
 
-### Overview
-1. From Shopify’s Admin API, the objective is to collect data for Shopify merchants who use the Facebook and Instagram sales channels for a given product category to determine whether either channel is more effective for a given product category.
+### Abstract
 
-2. From Wal-mart’s trending items and reviews APIs, the objective is to collect data for trending items on walmart.com and determine whether it bears relation to product review counts.
+### Background
 
-3. From UPS’s locator and rating APIs, the objective is to collect data for UPS storefront locations and determine whether it bears relation to UPS shipping rates.
+Introduced to the sport and game of basketball at a young age, my curiosity follows in determining whether offensive or defensive play is equivalently integral to game wins. In the exploration of this question, we look through the prism of some of the NBA's advanced statistics.  
 
-### Scientific Question
+### Question and Hypotheses
 
-1. Do sales for a given product category differ between Facebook and Instagram sales channels?
+Question: Does offensive and defensive game play differ between winning and losing teams?
 
-2. On walmart.com, do product reviews and trending items relate?
+Null hypothesis: There is no difference between offensive and defensive game play stats for winning and losing teams.
 
-3. For UPS, do proximities to UPS stores and shipping rates relate?
+Alternative hypothesis: There is a difference between offensive and defensive game play stats for winning and losing teams.
 
-### Data Source
+### Data
 
-1. Shopify Admin API
+Data consisted of NBA 2018-19 regular season game statistics from NBA.com APIs via the client package at [nba-api](https://pypi.org/project/nba-api/). From the season data, I select the following statistics to compare winning and losing teams as proxies to measure offensive and defensive play:
 
-2. Wal-mart trending items and reviews APIs
+1. Effective field goal percentage
+1. Turnover rate
+1. Offensive rebounding percentage
+1. Free throw attempt rate 
 
-3. UPS locator and rating APIs
+These are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate most closely with winning basketball games.
+
+### Methods
+
+The statistical test applied is a t-test for the difference of means between the winning and losing team samples because the standard deviations of the winning and losing team populations are unknown. Because the sample sizes are sufficiently large, we can additionally assume that the distribution for the difference of means approximates the normal distribution by the central limit theorem.
+
+### Results
+
+For each of the statistics above, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for winning and losing teams.
+
+### Acknowledgements
+
+Thanks to Juliana Duncan, Dan Rupp & Kiara Hearn for their help and guidance during this project.
+
+### References
+API client package: [nba-api](https://pypi.org/project/nba-api/)
