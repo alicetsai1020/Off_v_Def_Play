@@ -36,11 +36,11 @@ TO rate | taking care of the ball |
 OREB% | ball recovery by the offensive team |
 FTA rate | getting to the foul line
 
-![](images/EFG%.png)
+![](images/EFG.png)
 
-![](images/TO%.png)
+![](images/TO.png)
 
-![](images/OREB%.png)
+![](images/OREB.png)
 
 ![](images/FTAR.png)
 
