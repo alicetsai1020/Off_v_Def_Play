@@ -1,6 +1,6 @@
 ![](images/1718champions.jpg)
 
-# It's Stats Time - Offense versus Defense
+# Basketball on Paper
 
 ### Background
 
