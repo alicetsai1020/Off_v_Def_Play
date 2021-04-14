@@ -1,4 +1,4 @@
-![](images/1718champions.jpg)
+![](images/NBA-Goat.jpg)
 
 # Basketball on Paper
 
@@ -14,35 +14,16 @@ Null hypothesis: There is no difference between offensive and defensive game pla
 
 Alternative hypothesis: There is a difference between offensive and defensive game play stats for winning and losing teams.
 
-![](images/WinsbyTeam.png)
-
-![](images/LossesbyTeam.png)
-
 ### Data
 
 Data consisted of NBA 2018-19 regular season game statistics from NBA.com APIs via the client package at [nba-api](https://pypi.org/project/nba-api/). Data drawn is comprised of a game log, league stats, and play stats by team. From the season data, I select the following statistics to compare winning and losing teams as proxies to measure offensive and defensive play:
 
-1. Effective field goal percentage (EFG%)
-1. Turnover rate (TO rate)
-1. Offensive rebounding percentage (OREB%)
-1. Free throw attempt rate (FTA rate)
+1. Effective field goal percentage (EFG%) - shooting the ball
+1. Turnover rate (TO rate) - taking care of the ball
+1. Offensive rebounding percentage (OREB%) - ball recovery by the offensive team
+1. Free throw attempt rate (FTA rate) - getting to the foul line
 
 These are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate most closely with winning basketball games.
-
-Statistic | What it is a measure of | 
---- | --- | 
-EFG% | shooting the ball |
-TO rate | taking care of the ball |
-OREB% | ball recovery by the offensive team |
-FTA rate | getting to the foul line
-
-![](images/EFG.png)
-
-![](images/TO.png)
-
-![](images/OREB.png)
-
-![](images/FTAR.png)
 
 ### Methods
 
@@ -50,9 +31,26 @@ The statistical test applied is a Welch’s t-test on the difference of means be
 
 ### Results
 
-For each of the play statistics by NBA team above, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for winning and losing teams.
+For each of the play statistics by NBA team below, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for winning and losing teams.
 
 With a significance level selected at 5% and a conservative Bonferroni correction application which further sets the significance level at 1.25% for each t-test, the Welch’s t-tests results of infinitesimally small p-values provide suitable statistical evidence. 
+
+![](images/EFG.png)
+
+p-value: 3.029870529831025e-129
+
+![](images/TO.png)
+
+p-value: 7.22946836638982e-07
+
+![](images/OREB.png)
+
+p-value: 3.04422770092005e-12
+
+![](images/FTAR.png)
+
+p-value: 1.4689448438961602e-07
+
 
 ### Acknowledgements
 
