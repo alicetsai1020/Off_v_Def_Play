@@ -8,22 +8,27 @@ Introduced to the sport and game of basketball at a young age, my curiosity foll
 
 ### Question and Hypotheses
 
-Question: Does offensive and defensive game play differ between winning and losing teams?
+Question: Is offensive or defensive game play more integral to wins?
 
-Null hypothesis: There is no difference between offensive and defensive game play stats for winning and losing teams.
+Null hypothesis: There is no difference between offensive and defensive game play stats for wins.
 
-Alternative hypothesis: There is a difference between offensive and defensive game play stats for winning and losing teams.
+Alternative hypothesis: There is a difference between offensive and defensive game play stats for wins.
 
 ### Data
 
 Data consisted of NBA 2018-19 regular season game statistics from NBA.com APIs via the client package at [nba-api](https://pypi.org/project/nba-api/). Data drawn is comprised of a game log, league stats, and play stats by team. From the season data, I select the following statistics to compare winning and losing teams as proxies to measure offensive and defensive play:
 
+Offensive play statistics:
 1. Effective field goal percentage (EFG%) - shooting the ball
-1. Turnover rate (TO rate) - taking care of the ball
 1. Offensive rebounding percentage (OREB%) - ball recovery by the offensive team
 1. Free throw attempt rate (FTA rate) - getting to the foul line
 
-These are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate most closely with winning basketball games.
+Defensive play statistics:
+1. Turnover rate (TO rate) – failure to take care of the ball
+1. Defensive rebounding percentage (DREB%) - ball recovery by the defensive team
+1. Block attempt rate (BLKA rate) - guarding the rim
+
+The EFG%, REB%, TO rate, and the FTA rate are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate closely with winning games. With a focus on drawing comparisons in offensive and defensive play, I add a measure for a BLKA rate.
 
 ### Methods
 
@@ -31,17 +36,13 @@ The statistical test applied is a Welch’s t-test on the difference of means be
 
 ### Results
 
-For each of the play statistics by NBA team below, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for winning and losing teams.
+For each of the play statistics by NBA team below, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for wins.
 
 With a significance level selected at 5% and a conservative Bonferroni correction application which further sets the significance level at 1.25% for each t-test, the Welch’s t-tests results of infinitesimally small p-values provide suitable statistical evidence. 
 
 ![](images/EFG.png)
 
 p-value: 3.029870529831025e-129
-
-![](images/TO.png)
-
-p-value: 7.22946836638982e-07
 
 ![](images/OREB.png)
 
@@ -51,6 +52,13 @@ p-value: 3.04422770092005e-12
 
 p-value: 1.4689448438961602e-07
 
+![](images/TO.png)
+
+p-value: 7.22946836638982e-07
+
+![](images/DREB.png)
+
+p-value: 2.969990853938123e-1
 
 ### Acknowledgements
 
