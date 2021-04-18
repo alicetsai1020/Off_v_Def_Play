@@ -26,9 +26,8 @@ Offensive play statistics:
 Defensive play statistics:
 1. Turnover rate (TO rate) – failure to take care of the ball
 1. Defensive rebounding percentage (DREB%) - ball recovery by the defensive team
-1. Block attempt rate (BLKA rate) - guarding the rim
 
-The EFG%, REB%, TO rate, and the FTA rate are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate closely with winning games. With a focus on drawing comparisons in offensive and defensive play, I add a measure for a BLKA rate.
+The EFG%, REB%, TO rate, and the FTA rate are commonly known as the four factors, which are box score derived metrics and are presumed by many to correlate closely with winning games. 
 
 ### Methods
 
@@ -36,9 +35,9 @@ The statistical test applied is a Welch’s t-test on the difference of means be
 
 ### Results
 
-For each of the play statistics by NBA team below, the null hypothesis is rejected - there is statistical evidence to infer that there is a difference between offensive and defensive game play stats for wins.
+For each of the play statistics below, the null hypothesis is rejected - there is statistical evidence to infer that both offensive and defensive game play stats play into wins.
 
-With a significance level selected at 5% and a conservative Bonferroni correction application which further sets the significance level at 1.25% for each t-test, the Welch’s t-tests results of infinitesimally small p-values provide suitable statistical evidence. 
+With a significance level selected at 5% and a conservative Bonferroni correction application which further sets the significance level at 1% for each t-test, the Welch’s t-tests results of infinitesimally small p-values provide suitable statistical evidence. 
 
 ![](images/EFG.png)
 
@@ -59,6 +58,12 @@ p-value: 7.22946836638982e-07
 ![](images/DREB.png)
 
 p-value: 2.969990853938123e-1
+
+### Future Analysis
+
+With more recently available NBA stats published on opponent's shooting, exploring other robust measures of defensive play such as a block attempts rate (BLKA rate), a ratio of block attempts to an opponent's field goal attempts, would add to create a more full picture of the analysis.
+
+A redesign of the statistical tests could for instance look at the top and bottom 10 teams across a number of NBA seasons to compare pairs of stats for statistical significance such as OREB% and DREB%, FGA and BLKA rates, etc.
 
 ### Acknowledgements
 
