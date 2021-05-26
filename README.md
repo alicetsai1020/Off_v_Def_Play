@@ -31,7 +31,7 @@ The statistical test applied is a Welch’s t-test on the difference of means be
 
 ### Results
 
-For each of the play statistics below, the null hypothesis is rejected - there is statistical evidence to infer that both offensive and defensive game play stats play into wins.
+For each of the play statistics below, the null hypothesis is rejected - there is statistical evidence to infer that both offensive and defensive game play stats play equivalently into wins.
 
 With a significance level selected at 5% and a conservative Bonferroni correction application which further sets the significance level at 0.625% for each t-test, the Welch’s t-tests results of infinitesimally small p-values provide suitable statistical evidence. 
 
