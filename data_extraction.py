@@ -59,8 +59,7 @@ def get_boxscorefourfactors(game_id_lst):
 
     return boxscorefourfactorsv2_df
 
-#     boxscorefourfactorsv2_df.to_csv(r'data/boxscorefourfactorsv2.csv', index=False)
-        
+
 def get_boxscoremisc(game_id_lst):
     from nba_api.stats.endpoints import boxscoremiscv2
         
@@ -74,5 +73,3 @@ def get_boxscoremisc(game_id_lst):
     boxscoremiscv2_df = boxscoremiscv2_df.drop_duplicates(ignore_index=True)
     
     return boxscoremiscv2_df
-
-#     boxscoremiscv2_df.to_csv(r'data/boxscoremiscv2.csv', index=False)
